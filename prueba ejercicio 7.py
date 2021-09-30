@@ -12,15 +12,15 @@ radio=100
 #calculo de porcentajes y angulos
 total=suspensos+aprobados+notables+sobresalientes
 
-por_suspensos=100*suspensos/total
-por_aprobados=100*aprobados/total
-por_notables=100*notables/total
-por_sobresalientes=100*sobresalientes/total
+por_suspensos=100*suspensos//total
+por_aprobados=100*aprobados//total
+por_notables=100*notables//total
+por_sobresalientes=100*sobresalientes//total
 
-angulosuspensos=360*por_suspensos/100
-anguloaprobados=360*por_aprobados/100
-angulonotables=360*por_notables/100
-angulosobresalientes=360*por_sobresalientes/100
+angulosuspensos=360*por_suspensos//100
+anguloaprobados=360*por_aprobados//100
+angulonotables=360*por_notables//100
+angulosobresalientes=360*por_sobresalientes//100
 
 
 #Crear pantalla y turtle
@@ -60,7 +60,7 @@ tortuga.penup()
 tortuga.home()
 
 #Dibujo de sobresalientes
-tortuga.pencolor('blue')
+tortuga.pencolor('black')
 tortuga.pendown()
 tortuga.right(angulosobresalientes)
 tortuga.forward(radio)
@@ -80,5 +80,5 @@ tortuga.goto(110,0)
 tortuga.pencolor('green')
 tortuga.write('Notables:{0}'.format(round(por_notables,2)))
 tortuga.goto(110,-25)
-tortuga.pencolor('blue')
+tortuga.pencolor('black')
 tortuga.write('Sobresalientes:{0}'.format(round(por_sobresalientes,2)))
