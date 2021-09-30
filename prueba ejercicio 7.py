@@ -3,22 +3,22 @@ from turtle import *
 print( 'Visualizar un diagrama de pastel coroleado basandose en tus notas de una asignatura')
 
 #Pedir los datos
-suspensos=int(input('Numero de suspensos: '))
-aprobados=int(input('Numero de aprobados: '))
+sus=int(input('Numero de sus: '))
+apr=int(input('Numero de apr: '))
 notables=int(input('Numero de notables: '))
 sobresalientes=int(input('Numero de sobresalientes: '))
 radio=100
 
 #calculo de porcentajes y angulos
-total=suspensos+aprobados+notables+sobresalientes
+t=sus+apr+notables+sobresalientes
 
-por_suspensos=100*suspensos/total
-por_aprobados=100*aprobados/total
-por_notables=100*notables/total
-por_sobresalientes=100*sobresalientes/total
+por_sus=100*sus/t
+por_apr=100*apr/t
+por_notables=100*notables/t
+por_sobresalientes=100*sobresalientes/t
 
-angulosuspensos=360*por_suspensos/100
-anguloaprobados=360*por_aprobados/100
+angulosus=360*por_sus/100
+anguloapr=360*por_apr/100
 angulonotables=360*por_notables/100
 angulosobresalientes=360*por_sobresalientes/100
 
@@ -30,22 +30,22 @@ pantalla.screensize(400,200)
 tortuga=Turtle()
 tortuga.pensize(2)
 
-#Dibujo de suspensos
+#Dibujo de sus
 tortuga.pendown()
 tortuga.pencolor('Red')
 tortuga.forward(radio)
 tortuga.left(90)
-tortuga.circle(radio,angulosuspensos)
+tortuga.circle(radio,angulosus)
 tortuga.penup()
 tortuga.home()
 
-#Dibujo de aprobados
+#Dibujo de apr
 tortuga.pencolor('yellow')
 tortuga.pendown()
-tortuga.left(angulosuspensos)
+tortuga.left(angulosus)
 tortuga.forward(radio)
 tortuga.left(90)
-tortuga.circle(radio,anguloaprobados)
+tortuga.circle(radio,anguloapr)
 tortuga.penup()
 tortuga.home()
 
@@ -72,10 +72,10 @@ tortuga.home()
 #Escribir los datos en el lado
 tortuga.pencolor('red')
 tortuga.goto(110,50)
-tortuga.write('Suspensos:{0}'.format(round(por_suspensos,2)))
+tortuga.write('sus:{0}'.format(round(por_sus,2)))
 tortuga.goto(110,25)
 tortuga.pencolor('yellow')
-tortuga.write('Aprobados:{0}'.format(round(por_aprobados,2)))
+tortuga.write('apr:{0}'.format(round(por_apr,2)))
 tortuga.goto(110,0)
 tortuga.pencolor('green')
 tortuga.write('Notables:{0}'.format(round(por_notables,2)))
