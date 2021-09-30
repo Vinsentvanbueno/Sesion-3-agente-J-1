@@ -3,10 +3,10 @@ from turtle import *
 print( 'Visualizar un sector circular')
 
 #Pedir datos
-X=float(input('Dame la coordenada X: '))
-Y=float(input('Dame la coordenada Y: '))
-radio=float(input('Dame el radio: '))
-angulo=float(input('Dame el ángulo: '))
+X=float(input('Dame el valor de X en el espacio: '))
+Y=float(input('Dame el valor de Y en el espacio: '))
+radio=float(input('Dame el radio para el sector circular: '))
+angulo=float(input('Dame el ángulo del sector circular: '))
 
 #Crear pantalla y turtle
 pantalla=Screen()
